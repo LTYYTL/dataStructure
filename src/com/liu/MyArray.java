@@ -3,8 +3,9 @@ package com.liu;
 
 public class MyArray<E> {
 
-    public int size;//数组中实际元素个数
-    public E[] data;//存储的数据
+    private int size;//数组中实际元素个数
+    private E[] data;//存储的数据
+
 
     public MyArray(int capacity){
         data = (E[])new Object[capacity];
@@ -14,6 +15,22 @@ public class MyArray<E> {
     //无参构造方法，默认容量capacity=10
     public MyArray(){
         this(10);
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public E[] getData() {
+        return data;
+    }
+
+    public void setData(E[] data) {
+        this.data = data;
     }
 
     /**
@@ -90,6 +107,21 @@ public class MyArray<E> {
         return data[index];
     }
 
+    /**
+     * 获得第一个元素
+     * @return
+     */
+    public E getFirst(){
+        return get(0);
+    }
+
+    /**
+     * 获得最后一个元素
+     * @return
+     */
+    public E getLast(){
+        return get(size - 1);
+    }
     /**
      * 修改index处的值
      * @param index 索引
@@ -193,4 +225,5 @@ public class MyArray<E> {
 
         data =newData;;
     }
+
 }
