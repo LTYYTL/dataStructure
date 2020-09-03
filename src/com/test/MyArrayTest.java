@@ -1,6 +1,6 @@
-package com.liu.test;
+package com.test;
 
-import com.liu.MyArray;
+import com.dataStructure.MyArray;
 
 public class MyArrayTest {
     public static void main(String[] args) {

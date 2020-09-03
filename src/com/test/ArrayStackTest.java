@@ -1,6 +1,6 @@
-package com.liu.test;
+package com.test;
 
-import com.liu.ArrayStack;
+import com.dataStructure.ArrayStack;
 
 public class ArrayStackTest {
     public static void main(String[] args) {

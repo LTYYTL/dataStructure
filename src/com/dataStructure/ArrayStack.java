@@ -1,4 +1,4 @@
-package com.liu;
+package com.dataStructure;
 
 /**
  * 基于MyArray，实现接口Stack<E>

@@ -1,4 +1,4 @@
-package com.liu;
+package com.dataStructure;
 
 
 public class MyArray<E> {
