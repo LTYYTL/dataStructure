@@ -18,3 +18,9 @@
     * 循环队列（LoopQueue）
         * 模拟实现循环队列
         * LoopQueueTest类：用于测试LoopQueue类的功能
+* 链表（LinkedList）
+    * 模拟实现链表
+    * 无虚拟头节点的链表（LinkedList）
+        * LinkedListTest类：用于测试LinkedList类的功能
+    * 有虚拟头节点的链表（LinkedList_dummyHead）
+        * LinkedList_dummyHeadTest类：用于测试LinkedList_dummyHead类功能

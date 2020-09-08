@@ -1,10 +1,10 @@
 package com.test;
 
-import com.dataStructure.MyArray;
+import com.dataStructure.Array;
 
-public class MyArrayTest {
+public class ArrayTest {
     public static void main(String[] args) {
-        MyArray<Integer> array = new MyArray<>(5);
+        Array<Integer> array = new Array<>(5);
         array.addFirst(1);
         array.addLast(2);
         array.addLast(3);

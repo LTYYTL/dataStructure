@@ -5,27 +5,27 @@ package com.dataStructure;
  */
 public class ArrayStack<E> implements Stack<E> {
 
-    private MyArray<E> array;
+    private Array<E> array;
 
     /**
      * 构造函数
      */
     public ArrayStack(int capacity){
-        array = new MyArray<>(capacity);
+        array = new Array<>(capacity);
     }
 
     /**
      * 默认构造函数，调用MyArray的默认构造方法
      */
     public ArrayStack(){
-        array = new MyArray<>();
+        array = new Array<>();
     }
 
     /**
      * get方法
      * @return
      */
-    public MyArray<E> getArray() {
+    public Array<E> getArray() {
         return array;
     }
 
@@ -33,7 +33,7 @@ public class ArrayStack<E> implements Stack<E> {
      * set方法
      * @param array
      */
-    public void setArray(MyArray<E> array) {
+    public void setArray(Array<E> array) {
         this.array = array;
     }
 

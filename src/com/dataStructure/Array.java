@@ -1,19 +1,19 @@
 package com.dataStructure;
 
 
-public class MyArray<E> {
+public class Array<E> {
 
     private int size;//数组中实际元素个数
     private E[] data;//存储的数据
 
 
-    public MyArray(int capacity){
+    public Array(int capacity){
         data = (E[])new Object[capacity];
         size = 0;
     }
 
     //无参构造方法，默认容量capacity=10
-    public MyArray(){
+    public Array(){
         this(10);
     }
 

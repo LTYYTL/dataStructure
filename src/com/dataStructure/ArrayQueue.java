@@ -5,31 +5,31 @@ package com.dataStructure;
  * @param <E>
  */
 public class ArrayQueue<E> implements Queue<E> {
-    private  MyArray<E> array;
+    private Array<E> array;
 
     /**
      * 构造方法
      * @param capacity  队列长度
      */
     public ArrayQueue(int capacity) {
-        array = new MyArray<>(capacity);
+        array = new Array<>(capacity);
     }
 
     /**
      * 无参构造方法，默认队列长度为10
      */
     public ArrayQueue(){
-        array = new MyArray<>();
+        array = new Array<>();
     }
 
     /**
      * get和set
      */
-    public MyArray<E> getArray() {
+    public Array<E> getArray() {
         return array;
     }
 
-    public void setArray(MyArray<E> array) {
+    public void setArray(Array<E> array) {
         this.array = array;
     }
 
