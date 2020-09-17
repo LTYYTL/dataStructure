@@ -1,4 +1,4 @@
-package com.dataStructure;
+package com.dataStructure.stack;
 
 public interface Stack<E> {
     int getSize();

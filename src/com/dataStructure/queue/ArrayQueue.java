@@ -1,4 +1,6 @@
-package com.dataStructure;
+package com.dataStructure.queue;
+
+import com.dataStructure.array.Array;
 
 /**
  * 基于MyArray,实现Queue<E>接口

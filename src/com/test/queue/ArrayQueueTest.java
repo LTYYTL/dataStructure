@@ -1,6 +1,6 @@
-package com.test;
+package com.test.queue;
 
-import com.dataStructure.ArrayQueue;
+import com.dataStructure.queue.ArrayQueue;
 
 public class ArrayQueueTest {
     public static void main(String[] args) {

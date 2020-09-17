@@ -1,7 +1,6 @@
-package com.test;
+package com.test.linkedList;
 
-import com.dataStructure.LinkedList;
-import com.dataStructure.LinkedList_dummyHead;
+import com.dataStructure.linkedList.LinkedList;
 
 public class LinkedListTest {
     public static void main(String[] args) {

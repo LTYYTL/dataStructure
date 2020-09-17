@@ -1,6 +1,4 @@
-package com.dataStructure;
-
-import java.util.Arrays;
+package com.dataStructure.queue;
 
 public class LoopQueue<E> implements Queue<E> {
     //属性

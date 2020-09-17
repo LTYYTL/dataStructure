@@ -1,6 +1,6 @@
-package com.test;
+package com.test.queue;
 
-import com.dataStructure.LoopQueue;
+import com.dataStructure.queue.LoopQueue;
 
 public class LoopQueueTest {
     public static void main(String[] args) {

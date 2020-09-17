@@ -1,4 +1,6 @@
-package com.dataStructure;
+package com.dataStructure.stack;
+
+import com.dataStructure.array.Array;
 
 /**
  * 基于MyArray，实现接口Stack<E>

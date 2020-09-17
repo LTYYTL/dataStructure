@@ -1,6 +1,6 @@
-package com.test;
+package com.test.stack;
 
-import com.dataStructure.ArrayStack;
+import com.dataStructure.stack.ArrayStack;
 
 public class ArrayStackTest {
     public static void main(String[] args) {

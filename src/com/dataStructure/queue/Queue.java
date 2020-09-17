@@ -1,4 +1,4 @@
-package com.dataStructure;
+package com.dataStructure.queue;
 
 public interface Queue<E> {
     int getSize();

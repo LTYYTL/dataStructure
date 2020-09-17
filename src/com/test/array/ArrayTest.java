@@ -1,6 +1,6 @@
-package com.test;
+package com.test.array;
 
-import com.dataStructure.Array;
+import com.dataStructure.array.Array;
 
 public class ArrayTest {
     public static void main(String[] args) {

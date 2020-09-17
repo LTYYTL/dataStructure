@@ -1,10 +1,9 @@
-package com.dataStructure;
+package com.dataStructure.linkedList;
 
 /**
- * 不带虚拟头节点的链表
- * @param <E>
+ * 带虚拟头节点的链表
  */
-public class LinkedList<E> {
+public class LinkedList_dummyHead<E> {
     /**
      * 节点类
      * @param
@@ -32,11 +31,11 @@ public class LinkedList<E> {
         }
     }
 
-    private Node head;
+    private Node dummyhead;
     private int size;
 
-    public LinkedList() {
-        this.head = null;
+    public LinkedList_dummyHead() {
+        this.dummyhead = new Node(null,null);
         this.size = 0;
     }
 
@@ -60,31 +59,24 @@ public class LinkedList<E> {
      * 向链表的index位置添加元素
      * 注：基本是头插法或者尾插法，所以设计为私有
      * @param e 节点值
-     * @param index 插入的位置(从0开始)
+     * @param index 插入的位置
      */
     private void add(E e,int index){
         //index不合法
         if (index < 0 || index >size)
             throw new IllegalArgumentException("Add failed. Illegal index.");
-        //插入到头部
-        if (index == 0){
-            Node node = new Node(e);
-            node.next = head;
-            head = node;
-            size++;
-        }else {
-            Node pre = head;
-            //找到插入位置的前一个节点
-            for (int i = 0; i < index - 1; ++i)
-                pre = pre.next;
-            Node node = new Node(e);
-            //将新节点的next指向前一个节点的next
-            node.next = pre.next;
-            //前一个节点的next指向新节点
-            pre.next = node;
-            //维护链表长度
-            size++;
-        }
+
+        Node pre = dummyhead;
+        //找到插入位置的前一个节点
+        for (int i = 0; i < index; ++i)
+            pre = pre.next;
+        Node node = new Node(e);
+        //将新节点的next指向前一个节点的next
+        node.next = pre.next;
+        //前一个节点的next指向新节点
+        pre.next = node;
+        //维护链表长度
+        size++;
     }
 
     /**
@@ -103,18 +95,13 @@ public class LinkedList<E> {
         add(e,size);
     }
 
-    /**
-     * 获得第index位置的元素
-     * @param index 位置(从0开始)
-     * @return  第index位置的元素
-     */
-    private E get(int index){
+    public E get(int index){
         //index不合法
-        if (index < 0 || index > size)
+        if (index < 0 || index >size)
             throw new IllegalArgumentException("Get failed. Illegal index.");
-        //获得index位置的节点
-        Node cur = head;
-        for (int i = 0; i < index;i++)
+        //寻找当前元素
+        Node cur = dummyhead.next;
+        for (int i = 0; i < index; i++)
             cur = cur.next;
         return cur.e;
     }
@@ -145,7 +132,7 @@ public class LinkedList<E> {
         if (index < 0 || index > size)
             throw new IllegalArgumentException("Set failed. Illegal index.");
         //获得index位置的节点
-        Node cur = head;
+        Node cur = dummyhead.next;
         for (int i = 0; i < index; i++){
             cur = cur.next;
         }
@@ -159,7 +146,7 @@ public class LinkedList<E> {
      * @return
      */
     public boolean contains(E e){
-        Node cur = head;
+        Node cur = dummyhead.next;
         //循环链表找到值相等的点
         while(cur != null){
             if (cur.e.equals(e))
@@ -179,16 +166,9 @@ public class LinkedList<E> {
         //index不合法
         if (index < 0 || index > size)
             throw new IllegalArgumentException("Remove failed. Illegal index.");
-        //移除队首元素时
-        if(index == 0){
-            Node delNode = head;
-            head = delNode.next;
-            size--;
-            return delNode.e;
-        }
         //获取第index位置的前一个节点
-        Node pre = head;
-        for (int i = 0; i < index - 1; i++)
+        Node pre = dummyhead;
+        for (int i = 0; i < index; i++)
             pre = pre.next;
         //被删除节点
         Node delNode = pre.next;
@@ -223,7 +203,7 @@ public class LinkedList<E> {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        Node cur = head;
+        Node cur = dummyhead.next;
         while (cur != null){
             res.append(cur + "->");
             cur = cur.next;
